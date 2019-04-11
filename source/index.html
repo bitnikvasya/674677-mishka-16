@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин Mishka</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -51,8 +52,10 @@
       </section>
       <section class="popular">
         <div class="popular__wrapper">
-          <h2 class="popular__title">Вязаные корзинки</h2>
-          <span class="popular__header">Товар недели</span>
+          <div class="popular__header-wrapper">
+            <h2 class="popular__title">Вязаные корзинки</h2>
+            <span class="popular__header">Товар недели</span>
+          </div>
           <p class="popular__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
           <table class="popular__specifications">
             <tr>
@@ -75,7 +78,7 @@
       </section>
       <section class="advantages">
         <div class="advantages__wrapper">
-          <h2 class="advantages__header">Коротко о нас</h2>
+          <h2 class="advantages__header">Коротко о нас:</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--eco">
               <p class="advantages__title">Экологически чистые материалы</p>
@@ -101,22 +104,22 @@
       <section class="reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__header">Отзывы</h2>
-          <div class="reviews__list">
-            <blockquote class="reviews__item">
-              <p class="reviews__text">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="reviews__text">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <div class="reviews__author-wrapper">
               <cite class="reviews__author-name">Анастасия Красильникова</cite>
               <a class="reviews__author-link" href="#">@misssssiskras</a>
-            </blockquote>
-            <button class="reviews__prev" type="button"></button>
-            <button class="reviews__next" type="button"></button>
-          </div>
+            </div>
+            <div class="reviews__controls">
+              <button class="reviews__prev" type="button"></button>
+              <button class="reviews__next" type="button"></button>
+            </div>
           <a class="reviews__write button" href="#">Написать</a>
         </div>
       </section>
       <section class="contacts">
         <div class="contacts__wrapper">
           <h3 class="contacts__header">Контакты</h3>
-            <ul class="contacts__list">
+          <ul class="contacts__list">
             <li class="contacts__item">
               <span class="contacts__email">e-mail:</span>
               <span class="contacts__email-value">info@mimimishkashop.ru</span>

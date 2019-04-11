@@ -10,11 +10,34 @@
   outline: 1px dashed lightgrey;
 }
 
+@media (min-width: @tablet-width) {
+  .intro__wrapper {
+    min-height: 627px;
+    padding: 0 50px;
+  }
+}
+
 .intro__header {
   .font-bold;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .intro__header {
+    width: 500px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__header {
+    width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

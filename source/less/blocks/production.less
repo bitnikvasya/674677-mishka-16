@@ -3,10 +3,19 @@
 }
 
 .production__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   min-height: 504px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 50px;
   outline: 1px dashed lightgrey;
+}
+
+@media (min-width: @desktop-width) {
+  .production__wrapper {
+    padding-left: 728px;
+  }
 }
 
 .production__header {
@@ -15,6 +24,21 @@
   .font-bold;
   font-size: 17px;
   line-height: 24px;
+  outline: 1px dashed lightgrey;
+}
+
+@media (min-width: @tablet-width) {
+  .production__image {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production__image {
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
 }
 
 .production__text-wrapper {

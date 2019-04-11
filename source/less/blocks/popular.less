@@ -3,10 +3,28 @@
 }
 
 .popular__wrapper {
+  position: relative;
   min-height: 823px;
   margin: 0 auto;
   padding: 0 30px;
   outline: 1px dashed lightgrey;
+}
+
+@media (min-width: @tablet-width) {
+  .popular__wrapper {
+    padding: 0 50px;
+  }
+}
+
+.popular__header-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .popular__header-wrapper {
+    flex-direction: row;
+  }
 }
 
 .popular__title {
@@ -17,6 +35,21 @@
   line-height: 30px;
 }
 
+@media (min-width: @tablet-width) {
+  .popular__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popular__title {
+    order: 1;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
 .popular__header {
   .font-bold;
   font-size: 17px;
@@ -24,9 +57,33 @@
   color: @base-color;
 }
 
+@media (min-width: @tablet-width) {
+  .popular__header {
+    font-size: 17px;
+    line-height: 17px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .popular__image {
+    position: absolute;
+    top: 0;
+    right: 50px;
+  }
+}
+
 .popular__price {
   .font-bold;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .popular__description,
+  .popular__specifications,
+  .popular__price,
+  .popular__order {
+    width: 50%;
+  }
 }
