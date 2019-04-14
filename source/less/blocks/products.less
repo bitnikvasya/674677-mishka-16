@@ -3,13 +3,14 @@
 }
 
 .products__wrapper {
-  min-height: 206px;
   margin: 0 auto;
   padding: 0;
   outline: 1px dashed lightgrey;
 }
 
 .products__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -26,6 +27,7 @@
   .font-bold;
   font-size: 19px;
   line-height: 24px;
+  color: #ffffff;
 }
 
 .products__item--interior {
@@ -34,4 +36,26 @@
 
 .products__item--toys {
   background: #56c3b2;
+}
+
+@media (min-width: @tablet-width) {
+  .products__wrapper {
+    margin: 0 auto;
+    padding: 0 50px;
+    outline: 1px dashed lightgrey;
+  }
+
+  .products__list {
+    flex-direction: row;
+  }
+
+  .products__item {
+    min-height: 120px;
+    width: 50%;
+  }
+
+  .products__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

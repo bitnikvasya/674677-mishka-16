@@ -4,9 +4,30 @@
 
 .header__wrapper {
   display: flex;
-  min-height: 80px;
+  flex-direction: column;
   margin: 0 auto;
-  padding: 0 30px;
-  align-items: center;
-  outline: 1px dashed lightgrey;
+  padding: 0;
+}
+
+.header__logo {
+  margin: 22px auto;
+  padding: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .header__wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 88px;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__logo {
+    position: absolute;
+    left: calc(50% - 50px);
+  }
 }
