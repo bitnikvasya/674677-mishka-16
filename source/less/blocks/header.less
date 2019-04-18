@@ -20,14 +20,29 @@
   .header__wrapper {
     flex-direction: row;
     justify-content: flex-start;
-    min-height: 88px;
     padding: 0 50px;
+  }
+
+  .header__logo {
+    margin: 21px 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .header__wrapper {
+    position: relative;
+  }
+
   .header__logo {
     position: absolute;
-    left: calc(50% - 50px);
+    left: calc(50% - 75px);
   }
 }
