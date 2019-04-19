@@ -1,44 +1,14 @@
 .navigation {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
-}
-
-.navigation__list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  .font-bold;
-  font-size: 17px;
-  line-height: 24px;
-}
-
-.navigation__item {
-  border-top: 1px solid #ececec;
-}
-
-.navigation__list a {
-  display: flex;
-  align-items: center;
-  padding: 27px 0 27px 75px;
-}
-
-.navigation__item svg {
-  position: absolute;
-  left: 30px;
-}
-
-.navigation__item path {
-  fill: #d3d2d2;
+  position: relative;
 }
 
 .navigation__toggle {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: -55px;
+  right: 28px;
   z-index: 2;
-  display: block;
   width: 30px;
   height: 30px;
   background: none;
@@ -46,7 +16,6 @@
   border: none;
   outline: none;
 }
-
 
 .navigation--closed .navigation__toggle::after {
   content: "";
@@ -81,6 +50,39 @@
   transform: rotate(-45deg);
 }
 
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .font-bold;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.navigation__item {
+  border-top: 1px solid #ececec;
+}
+
+.navigation__list a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  margin: 0 auto;
+  padding: 27px 0 27px 75px;
+}
+
+.navigation__item svg {
+  position: absolute;
+  left: 30px;
+}
+
+.navigation__item path {
+  fill: #d3d2d2;
+}
+
 @media (max-width: @mobile-width-only) {
   .navigation--closed .navigation__list {
     display: none;
@@ -100,14 +102,19 @@
     width: auto;
     margin: 0;
     margin-left: auto;
+    position: static;
+  }
+
+  .navigation__toggle {
+    display: none;
   }
 
   .navigation__list {
     flex-direction: row;
   }
 
-  .navigation__toggle {
-    display: none;
+  .navigation__item {
+    border-top: none;
   }
 
   .navigation__item-search,
@@ -115,12 +122,9 @@
     border-left: 1px solid #ececec;
   }
 
-  .navigation__list a {
+  .navigation__item a {
+    width: auto;
     padding: 0;
-  }
-
-  .navigation__item {
-    border-top: none;
   }
 
   .navigation__item svg {
