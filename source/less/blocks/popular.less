@@ -5,7 +5,7 @@
 .popular__wrapper {
   position: relative;
   margin: 0 auto;
-  padding: 25px 30px 42px;
+  padding: 0 30px;
 }
 
 .popular__wrapper::after {
@@ -24,7 +24,7 @@
 .popular__header-wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 24px;
+  padding: 25px 0;
 }
 
 .popular__title {
@@ -44,7 +44,9 @@
 }
 
 .popular__description {
-  line-height: 25px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0 0 16px;
 }
 
 .popular__specifications {
@@ -60,6 +62,13 @@
 
 .popular__specification {
   width: 94px;
+  margin: 0;
+  padding: 0;
+}
+
+.popular__image {
+  display: block;
+  margin: 0 auto;
 }
 
 .popular__price {
@@ -67,12 +76,17 @@
   font-size: 17px;
   line-height: 20px;
   text-align: center;
-  margin-bottom: 30px;
+  padding: 26px 0;
+  margin: 0;
+}
+
+.popular__order {
+  margin-bottom: 42px;
 }
 
 @media (min-width: @tablet-width) {
   .popular__wrapper {
-    padding: 0 50px 70px;
+    padding: 0 50px;
   }
 
   .popular__wrapper::after {
@@ -82,7 +96,7 @@
   .popular__header-wrapper {
     flex-direction: row;
     align-items: center;
-    margin: 47px 0;
+    padding: 45px 0 48px;
   }
 
   .popular__description,
@@ -111,26 +125,37 @@
 
   .popular__description {
     line-height: 31px;
-    margin-bottom: 35px;
+    padding-bottom: 35px;
+  }
+
+  .popular__specifications {
+    padding: 0;
+    margin-bottom: 20px;
   }
 
   .popular__image {
     position: absolute;
     top: 10px;
     right: 0;
+    width: 333px;
+    height: auto;
   }
 
   .popular__price {
     font-size: 20px;
     line-height: 24px;
-    margin-top: 54px;
-    margin-bottom: 35px;
+    margin: 0;
+    padding: 33px 0;
+  }
+
+  .popular__order {
+    margin-bottom: 70px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .popular__wrapper {
-    padding: 125px 50px 95px;
+    padding: 0 50px;
   }
 
   .popular__wrapper::after {
@@ -146,14 +171,7 @@
   }
 
   .popular__header-wrapper {
-    margin-bottom: 48px;
-  }
-
-  .popular__description,
-  .popular__specifications,
-  .popular__price,
-  .popular__order {
-    margin-left: 175px;
+    padding: 118px 0 47px;
   }
 
   .popular__title {
@@ -167,17 +185,28 @@
     padding: 0 22px;
   }
 
+  .popular__description-wrapper {
+    width: 875px;
+    margin: 0 auto;
+    padding-left: 175px;
+  }
+
   .popular__description {
-    margin-bottom: 45px;
+    padding-bottom: 45px;
+  }
+
+  .popular__specifications {
+    margin-bottom: 75px;
   }
 
   .popular__image {
     top: -160px;
+    width: 525px;
+    height: auto;
     z-index: -1;
   }
 
-  .popular__price {
-    margin-top: 110px;
-    margin-bottom: 35px;
+  .popular__order {
+    margin-bottom: 96px;
   }
 }
