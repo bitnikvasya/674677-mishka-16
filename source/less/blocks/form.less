@@ -3,14 +3,21 @@
 }
 
 .form__wrapper {
-  min-height: 1630px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+.form label {
+  .font-bold;
+  font-size: 17px;
+  line-height: 18px;
+  display: block;
 }
 
 .form__text {
   font-size: 13px;
   line-height: 24px;
+  padding: 10px 0 3px 0;
 }
 
 .form__type,
@@ -20,6 +27,22 @@
 .form__email,
 .form__comment {
   border: none;
+  border-top: 1px solid @base-color;
+  padding: 0;
+}
+
+.form__type {
+  padding-bottom: 35px;
+}
+
+.form__color {
+  padding-bottom: 20px;
+}
+
+.form__type label,
+.form__color label {
+  position: relative;
+  cursor: pointer;
 }
 
 .form__type-title,
@@ -33,6 +56,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: @base-color;
+  padding: 8px 20px 10px 0;
 }
 
 .form__type-list,
@@ -42,10 +66,80 @@
   padding: 0;
 }
 
-.form__label {
-  .font-bold;
-  font-size: 17px;
-  line-height: 18px;
+.form__type-list input,
+.form__color-list input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form__type-option,
+.form__color-option {
+  padding: 25px 0 0 60px;
+}
+
+.form__color-option {
+  padding-bottom: 18px;
+}
+
+.form__input-radio + label:before {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: -60px;
+  width: 34px;
+  height: 34px;
+  content: '';
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.form__input-radio:checked + label:after {
+  position: absolute;
+  top: calc(50% - 6px);
+  left: -49px;
+  width: 16px;
+  height: 16px;
+  content: '';
+  border-radius: 50%;
+  background-color: @base-color;
+}
+
+.form__input-checkbox + label:before {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: -60px;
+  width: 34px;
+  height: 34px;
+  content: '';
+  border: 2px solid #000000;
+}
+
+.form__input-checkbox:checked + label:after {
+  position: absolute;
+  top: calc(50% - 6px);
+  left: -57px;
+  width: 33px;
+  height: 23px;
+  content: '';
+  background: url("../img/icon-tick.svg") center 0 no-repeat;
+  background-size: 80%;
+}
+
+.form__input-radio:hover + label:before,
+.form__input-checkbox:hover + label:before {
+  border-color: @base-color;
+}
+
+.form__input-radio:active + label:before,
+.form__input-checkbox:active + label:before {
+  border-color: #c7c7c7;
 }
 
 .form__input,
@@ -53,14 +147,380 @@
   display: block;
   font-size: 17px;
   line-height: 18px;
+  color: #000000;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding: 16px 0;
+}
+
+.form__input:hover,
+.form__input:focus,
+.form__textarea:hover,
+.form__textarea:focus {
+  border-color: @base-color;
+}
+
+.form__input:hover + label svg path,
+.form__input:focus + label svg path{
+  fill: @base-color;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
   color: #cccccc;
+}
+
+.form__fio-title {
+  padding-bottom: 15px;
+}
+
+.form__fio-option {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+}
+
+.form__telephone-option,
+.form__email-option,
+.form__comment-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 22px 0;
+}
+
+.form__label-telephone,
+.form__label-email {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+.form__label-telephone path,
+.form__label-email path{
+  fill: #cccccc;
+}
+
+.form__comment-option {
+  padding-top: 15px;
+  margin: 0;
+}
+
+.form__textarea {
+  height: 140px;
+  padding: 15px;
+  border: 2px solid #000000;
+  resize: none;
 }
 
 .form__note {
   font-size: 14px;
   line-height: 16px;
+  margin: 0;
+  padding: 18px 0;
 }
 
 .form__button {
   background: none;
+  margin: 13px 0 53px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    padding: 0;
+  }
+
+  .form label,
+  .form input,
+  .form textarea {
+    font-size: 19px;
+  }
+
+  .form__input,
+  .form__textarea {
+    padding: 16px 15px;
+  }
+
+  .form__text {
+    font-size: 17px;
+    line-height: 30px;
+    padding: 52px 50px;
+  }
+
+  .form__type,
+  .form__color,
+  .form__fio,
+  .form__telephone,
+  .form__email,
+  .form__comment {
+    position: relative;
+    border: none;
+    padding: 0 50px;
+}
+
+  .form__color,
+  .form__telephone,
+  .form__email {
+    background: #f1f1f1;
+  }
+
+  .form__type-title,
+  .form__color-title,
+  .form__fio-title,
+  .form__telephone-title,
+  .form__email-title,
+  .form__comment-title {
+    position: absolute;
+  }
+
+  .form__type-list,
+  .form__color-list,
+  .form__fio p,
+  .form__telephone-option,
+  .form__email-option,
+  .form__comment-option {
+    margin-left: 167px;
+  }
+
+  .form__type-list {
+    padding-bottom: 16px;
+  }
+
+  .form__type-list li {
+    padding: 5px 0 53px 80px;
+  }
+
+  .form__input-radio + label:before {
+    top: calc(50% - 24px);
+    left: -80px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .form__input-radio:checked + label:after {
+    top: calc(50% - 8px);
+    left: -64px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .form__color {
+    padding: 41px 50px 37px;
+  }
+
+  .form__color-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__color-option {
+    padding: 25px 0 33px 80px;
+  }
+
+  .form__color-option:nth-child(2n-1) {
+    width: 36%;
+  }
+
+  .form__input-checkbox + label:before {
+    top: calc(50% - 25px);
+    left: -80px;
+    width: 50px;
+    height: 50px;
+    }
+
+  .form__input-checkbox:checked + label:after {
+    top: calc(50% - 9px);
+    left: -70px;
+    width: 33px;
+    height: 23px;
+    background-size: 100%;
+  }
+
+  .form__color-title {
+    top: 60px;
+  }
+
+  .form__fio {
+    padding-top: 45px;
+    padding-bottom: 16px;
+  }
+
+  .form__fio-option {
+    flex-direction: row;
+    padding-bottom: 18px;
+  }
+
+  .form__fio-option label {
+    padding-right: 22px;
+    padding-top: 5px;
+  }
+
+  .form__fio-option input {
+    flex-grow: 1;
+    padding: 0 17px 15px;
+  }
+
+  .form__fio-title {
+    padding-top: 22px;
+  }
+
+  .form__telephone {
+    padding-top: 45px;
+  }
+
+  .form__telephone-title {
+    top: 59px;
+  }
+
+  .form__telephone-option {
+    margin-bottom: 0;
+    padding-bottom: 16px;
+  }
+
+  .form__label-telephone,
+  .form__label-email {
+    top: 17px;
+    right: 20px;
+  }
+
+  .form__input-telephone,
+  .form__input-email {
+    background: #f1f1f1;
+  }
+
+  .form__email {
+    padding-bottom: 27px;
+  }
+
+  .form__email-title {
+    top: 15px;
+  }
+
+  .form__comment {
+    padding-top: 35px;
+  }
+
+  .form__comment-title {
+    top: 60px;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+  }
+
+  .form__note {
+    font-size: 17px;
+  }
+
+  .form__button {
+    order: -1;
+    width: 230px;
+    margin: 52px auto 50px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__text {
+    width: 700px;
+    padding: 120px 0 65px 0;
+    margin: 0 auto;
+  }
+
+  .form__type,
+  .form__fio,
+  .form__comment {
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .form__type-title,
+  .form__fio-title,
+  .form__comment-title {
+    top: 0;
+    left: -110px;
+  }
+
+  .form__fio p,
+  .form__comment-option {
+    margin-left: 0;
+  }
+
+  .form__type-list {
+    margin: 0;
+  }
+
+  .form__color-wrapper,
+  .form__telephone-wrapper,
+  .form__email-wrapper {
+    position: relative;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .form__color-title,
+  .form__telephone-title,
+  .form__email-title {
+    top: 20px;
+    left: 60px;
+  }
+
+  .form__color-list {
+    margin-left: 175px;
+  }
+
+  .form__color-option:nth-child(2n-1) {
+    width: 180px;
+  }
+
+  .form__color-option {
+    width: 180px;
+  }
+
+  .form__fio,
+  .form__comment {
+    padding: 45px 0 16px;
+  }
+
+  .form__fio-title {
+    top: 45px;
+    left: -113px;
+  }
+
+  .form__telephone-option,
+  .form__email-option {
+    width: 700px;
+    margin-left: 175px;
+  }
+
+  .form__label-telephone,
+  .form__label-email {
+    right: 10px;
+  }
+
+  .form__comment {
+    padding-bottom: 0;
+  }
+
+  .form__comment-title {
+    top: 60px;
+  }
+
+  .form__comment-option {
+    padding-top: 5px;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .form__button {
+    margin-top: 50px;
+  }
 }
