@@ -12,3 +12,20 @@
       navMain.classList.remove('navigation--opened');
     }
   });
+
+  var link = document.querySelector(".modal-open");
+var popup = document.querySelector(".modal");
+var close = popup.querySelector(".modal-close");
+link.addEventListener("click", function (a) {
+  a.preventDefault();
+  popup.classList.add("modal-show")
+});
+
+window.addEventListener("keydown", function (a) {
+  a.preventDefault();
+  if (a.keyCode === 27) {
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show")
+    }
+  }
+});

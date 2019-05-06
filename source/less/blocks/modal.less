@@ -1,0 +1,101 @@
+.modal {
+  display: none;
+}
+
+.modal-show {
+  display: block;
+  position: fixed;
+  width: 320px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 0 30px;
+  background: #ffffff;
+  border: 1px solid #c7c7c7;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2), 0 0 0 2000px rgba(255,255,255,0.8);
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.modal__header {
+  width: 150px;
+  margin: 0 auto;
+  padding: 33px 0 13px;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal__text {
+  margin: 0;
+  padding: 0 0 22px;
+  text-align: center;
+}
+
+.madal__size-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 32px;
+}
+
+.modal__label {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 80px;
+  height: 50px;
+  border: 2px solid #ececec;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+.modal__label:hover {
+  border-color: #c7c7c7;
+}
+
+.modal__size-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal__input:checked + label {
+  border-color: @base-color;
+}
+
+.modal__button {
+  color: #ffffff;
+  background: @base-color;
+  border: none;
+  margin-bottom: 48px;
+}
+
+@media (min-width: @tablet-width) {
+.modal-show {
+  width: 566px;
+  padding: 0 108px;
+}
+
+.modal__header {
+  width: auto;
+  font-size: 29.5px;
+  line-height: 57px;
+}
+
+.modal__label {
+  width: 112px;
+}
+
+}

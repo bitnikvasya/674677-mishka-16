@@ -117,7 +117,7 @@
               <img class="popular__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
             </picture>
             <p class="popular__price">Цена: 990 руб.</p>
-            <a class="popular__order button" href="#">Заказать</a>
+            <a class="popular__order button modal-open" href="#">Заказать</a>
           </div>
         </div>
       </section>
@@ -326,6 +326,27 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <form class="modal__wrapper">
+        <h2 class="modal__header">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <ul class="madal__size-list">
+          <li class="modal__size-option">
+            <input class="modal__input modal__input-s" type="radio" name="availability" id="radio-s" checked>
+            <label class="modal__label" for="radio-s">S</label>
+          </li>
+          <li class="modal__size-option">
+            <input class="modal__input modal__input-m" type="radio" name="availability" id="radio-m">
+            <label class="modal__label" for="radio-m">M</label>
+          </li>
+          <li class="modal__size-option">
+            <input class="modal__input modal__input-l" type="radio" name="availability" id="radio-l">
+            <label class="modal__label" for="radio-l">L</label>
+          </li>
+        </ul>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
+    </section>
     <script src="js/modal.js"></script>
   </body>
 </html>
