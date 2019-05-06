@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Интернет-магазин Mishka</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -27,8 +27,8 @@
             </li>
             <li class="navigation__item navigation__item-search">
               <a class="navigation__search" href="search.html">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
-                  <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+                <svg width="17.6px" height="17.6px">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
                 <span>Поиск по сайту</span>
               </a>
@@ -112,12 +112,15 @@
               </tr>
             </table>
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
               <img class="popular__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
             </picture>
             <p class="popular__price">Цена: 990 руб.</p>
-            <a class="popular__order button" href="#">Заказать</a>
+            <a class="popular__order button modal-open" href="#">Заказать</a>
           </div>
         </div>
       </section>
@@ -246,6 +249,9 @@
           </ul>
           <div class="contacts__map">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
               <img class="contacts__map-image" srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Mishka на карте">
@@ -326,6 +332,27 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <form class="modal__wrapper">
+        <h2 class="modal__header">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <ul class="madal__size-list">
+          <li class="modal__size-option">
+            <input class="modal__input modal__input-s" type="radio" name="availability" id="radio-s" checked>
+            <label class="modal__label" for="radio-s">S</label>
+          </li>
+          <li class="modal__size-option">
+            <input class="modal__input modal__input-m" type="radio" name="availability" id="radio-m">
+            <label class="modal__label" for="radio-m">M</label>
+          </li>
+          <li class="modal__size-option">
+            <input class="modal__input modal__input-l" type="radio" name="availability" id="radio-l">
+            <label class="modal__label" for="radio-l">L</label>
+          </li>
+        </ul>
+        <button class="modal__button button" type="submit">Добавить</button>
+      </form>
+    </section>
     <script src="js/modal.js"></script>
   </body>
 </html>

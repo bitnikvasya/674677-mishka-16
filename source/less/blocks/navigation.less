@@ -77,9 +77,6 @@
 .navigation__item svg {
   position: absolute;
   left: 30px;
-}
-
-.navigation__item path {
   fill: #d3d2d2;
 }
 
@@ -125,6 +122,14 @@
   .navigation__item a {
     width: auto;
     padding: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .navigation__item svg {
@@ -153,16 +158,6 @@
   .navigation__item-catalog a,
   .navigation__item-form a {
     padding: 18px 0;
-  }
-
-  .navigation__item a {
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 
   .navigation__item a:hover path {
