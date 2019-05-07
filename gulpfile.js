@@ -14,6 +14,8 @@ var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
+var htmlmin = require("gulp-htmlmin");
+var uglyfly = require("gulp-uglyfly");
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -28,6 +30,15 @@ gulp.task("css", function () {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("js", function () {
+  return gulp.src("source/js/modal.js")
+    .pipe(uglyfly())
+    .pipe(rename("modal.min.js"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
 
@@ -61,6 +72,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin())
     .pipe(gulp.dest("build"));
 });
 
@@ -95,5 +107,5 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "js", "images", "webp", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
