@@ -5,8 +5,8 @@
     <title>Интернет-магазин Mishka</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
-    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymus">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymus">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <header class="header">
@@ -221,7 +221,7 @@
               <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-              <img class="contacts__map-image" srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Mishka на карте">
+              <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Mishka на карте">
             </picture>
             <svg width="66px" height="100.801px">
               <use xlink:href="img/sprite.svg#icon-map-pin"></use>
@@ -282,7 +282,7 @@
       <form class="modal__wrapper">
         <h2 class="modal__header">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>
-        <ul class="madal__size-list">
+        <ul class="modal__size-list">
           <li class="modal__size-option">
             <input class="modal__input modal__input-s" type="radio" name="availability" id="radio-s" checked>
             <label class="modal__label" for="radio-s">S</label>
@@ -299,6 +299,6 @@
         <button class="modal__button button" type="submit">Добавить</button>
       </form>
     </section>
-    <script src="js/modal.js"></script>
+    <script src="js/modal.min.js"></script>
   </body>
 </html>

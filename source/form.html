@@ -5,8 +5,8 @@
     <title>Интернет-магазин Mishka</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.min.css" rel="stylesheet">
-    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymus">
-    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymus">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <header class="header">
@@ -79,8 +79,8 @@
                 </li>
               </ul>
           </fieldset>
-          <fieldset class="form__color">
-            <div class="form__color-wrapper">
+          <div class="form__color-wrapper">
+            <fieldset class="form__color">
             <legend class="form__color-title">Цвет</legend>
             <ul class="form__color-list">
               <li class="form__color-option">
@@ -108,8 +108,8 @@
                 <label class="form__label-checkbox" for="form-orange">Оранжевый</label>
               </li>
             </ul>
-          </div>
           </fieldset>
+          </div>
           <fieldset class="form__fio">
             <legend class="form__fio-title">ФИО</legend>
             <p class="form__fio-option">
@@ -125,8 +125,8 @@
               <input class="form__input form__input-fathersname" id="input-fathersname" type="text" name="fathersname" value="" placeholder="Отчество, если желаете">
             </p>
           </fieldset>
+          <div class="form__telephone-wrapper">
           <fieldset class="form__telephone">
-            <div class="form__telephone-wrapper">
             <legend class="form__telephone-title">ТЕЛ</legend>
             <p class="form__telephone-option">
               <input class="form__input form__input-telephone" id="input-telephone" type="tel" name="telephone" value="" placeholder="+7 XXX XXX XX XX*" required="">
@@ -136,10 +136,10 @@
                 </svg>
               </label>
             </p>
-          </div>
           </fieldset>
+          </div>
+          <div class="form__email-wrapper">
           <fieldset class="form__email">
-            <div class="form__email-wrapper">
             <legend class="form__email-title">E-MAIL</legend>
             <p class="form__email-option">
               <input class="form__input form__input-email" id="input-email" type="email" name="email" value="" placeholder="Ваш Email*" required="">
@@ -149,8 +149,8 @@
                 </svg>
               </label>
             </p>
-          </div>
           </fieldset>
+          </div>
           <fieldset class="form__comment">
             <legend class="form__comment-title">ДОП</legend>
               <p class="form__comment-option">
