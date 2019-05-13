@@ -13,7 +13,7 @@
     }
   });
 
-  var link = document.querySelector(".modal-open");
+  var link = document.querySelectorAll(".modal-open");
   var popup = document.querySelector(".modal");
   var close = popup.querySelector(".modal-close");
 

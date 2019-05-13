@@ -37,9 +37,7 @@ gulp.task("js", function () {
   return gulp.src("source/js/modal.js")
     .pipe(uglyfly())
     .pipe(rename("modal.min.js"))
-    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/js"))
-    .pipe(server.stream());
 });
 
 gulp.task("images", function () {
