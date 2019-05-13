@@ -28,17 +28,21 @@
   padding-right: 10px;
 }
 
-.products__item path {
+.products__item svg {
   fill: #149080;
   opacity: 0.5;
 }
 
-.products__item a:hover path {
+.products__item:hover {
+  transform: translate(0, -5px);
+}
+
+.products__item a:hover svg {
   opacity: 0.7;
 }
 
 .products__item a:active .products__title,
-.products__item a:active path {
+.products__item a:active svg {
   opacity: 0.3;
 }
 

@@ -13,13 +13,16 @@
     }
   });
 
-  var link = document.querySelector(".modal-open");
+  var link = document.querySelectorAll(".modal-open");
   var popup = document.querySelector(".modal");
   var close = popup.querySelector(".modal-close");
-  link.addEventListener("click", function (a) {
+
+  for (var i = 0; i < link.length; i++){
+  link[i].addEventListener("click", function (a) {
     a.preventDefault();
     popup.classList.add("modal-show")
   });
+  }
 
   window.addEventListener("keydown", function (a) {
     a.preventDefault();
