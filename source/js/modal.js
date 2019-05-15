@@ -1,34 +1,41 @@
-  var navMain = document.querySelector('.navigation');
-  var navToggle = document.querySelector('.navigation__toggle');
+  var navMain = document.querySelector(".navigation");
+  var navToggle = document.querySelector(".navigation__toggle");
 
-  navMain.classList.remove('navigation--nojs');
+  navMain.classList.remove("navigation--nojs");
 
-  navToggle.addEventListener('click', function() {
-    if (navMain.classList.contains('navigation--closed')) {
-      navMain.classList.remove('navigation--closed');
-      navMain.classList.add('navigation--opened');
+  navToggle.addEventListener("click", function() {
+    if (navMain.classList.contains("navigation--closed")) {
+      navMain.classList.remove("navigation--closed");
+      navMain.classList.add("navigation--opened");
     } else {
-      navMain.classList.add('navigation--closed');
-      navMain.classList.remove('navigation--opened');
+      navMain.classList.add("navigation--closed");
+      navMain.classList.remove("navigation--opened");
     }
   });
 
   var link = document.querySelectorAll(".modal-open");
   var popup = document.querySelector(".modal");
   var close = popup.querySelector(".modal-close");
+  modalButtonArray = Array.prototype.slice.call(link);
 
-  for (var i = 0; i < link.length; i++){
-  link[i].addEventListener("click", function (a) {
+  modalButtonArray.forEach(function (el) {
+  el.addEventListener("click", function (a) {
     a.preventDefault();
     popup.classList.add("modal-show")
   });
-  }
-
-  window.addEventListener("keydown", function (a) {
-    a.preventDefault();
-    if (a.keyCode === 27) {
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show")
-      }
-    }
   });
+
+
+window.addEventListener("keydown", function (a) {
+  a.preventDefault();
+  if (a.keyCode === 27) {
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show")
+    }
+  }
+});
+
+close.addEventListener("click", function (a) {
+  a.preventDefault();
+  popup.classList.remove("modal-show")
+});

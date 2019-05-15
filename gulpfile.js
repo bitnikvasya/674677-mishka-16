@@ -2,11 +2,11 @@
 
 var gulp = require("gulp");
 var imagemin = require("gulp-imagemin");
-var webp = require('gulp-webp');
-var svgstore = require('gulp-svgstore');
-var posthtml = require('gulp-posthtml');
-var include = require('posthtml-include');
-var del = require('del');
+var webp = require("gulp-webp");
+var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
+var del = require("del");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var rename = require("gulp-rename");

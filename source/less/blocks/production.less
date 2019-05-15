@@ -48,25 +48,36 @@
   position: relative;
 }
 
-.production__image-play {
+.production__image-button {
   position: absolute;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
   width: 100px;
   height: 76px;
-  top: calc(50% - 38px);
-  left: calc(50% - 50px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   &:hover {
     width: 120px;
-    height: 92px;
-    top: calc(50% - 46px);
-    left: calc(50% - 60px);
+    height: 91px;
+  }
+
+  &:hover svg {
+    width: 120px;
+    height: 91px;
   }
 
   &:active {
     width: 80px;
-    height: 62px;
-    top: calc(50% - 31px);
-    left: calc(50% - 40px);
+    height: 61px;
+  }
+
+  &:active svg {
+    width: 80px;
+    height: 61px;
     opacity: 0.3;
   }
 }
@@ -83,7 +94,7 @@
 .production__text {
   font-size: 13px;
   line-height: 24px;
-  padding: 0 2px 10px 0;
+  padding: 0 0 10px 0;
 }
 
 @media (min-width: @tablet-width) {

@@ -5,6 +5,18 @@
 .modal-show {
   display: block;
   position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.modal__form {
+  display: block;
+  position: fixed;
   width: 320px;
   left: 50%;
   top: 50%;
@@ -12,7 +24,7 @@
   padding: 0 30px;
   background: #ffffff;
   border: 1px solid #c7c7c7;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 0 0 2000px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   z-index: 100;
 }
@@ -83,7 +95,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .modal-show {
+  .modal__form {
     width: 566px;
     padding: 0 108px;
   }

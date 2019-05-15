@@ -7,6 +7,10 @@
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <script>
+    document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="header">
@@ -29,7 +33,7 @@
             </li>
             <li class="navigation__item navigation__item-search">
               <a class="navigation__search" href="search.html">
-                <svg width="17.6px" height="17.6px">
+                <svg width="17.6" height="17.6">
                   <use xlink:href="img/sprite.svg#icon-search"></use>
                 </svg>
                 <span>Поиск по сайту</span>
@@ -37,7 +41,7 @@
             </li>
             <li class="navigation__item navigation__item-basket">
               <a class="navigation__basket" href="#">
-                <svg width="20.294px" height="18.849px">
+                <svg width="20.294" height="18.849">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
                 </svg>
                 <span>Корзина: пока пуста</span>
@@ -131,7 +135,8 @@
             <p class="form__telephone-option">
               <input class="form__input form__input-telephone" id="input-telephone" type="tel" name="telephone" value="" placeholder="+7 XXX XXX XX XX*" required="">
               <label class="form__label-telephone" for="input-telephone">
-                <svg width="24.829px" height="24.333px">
+                <span class="visually-hidden">Телефон</span>
+                <svg width="24.829" height="24.333">
                   <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>
               </label>
@@ -144,7 +149,8 @@
             <p class="form__email-option">
               <input class="form__input form__input-email" id="input-email" type="email" name="email" value="" placeholder="Ваш Email*" required="">
               <label class="form__label-email" for="input-email">
-                <svg width="32px" height="32px">
+                <span class="visually-hidden">E-mail</span>
+                <svg width="32" height="32">
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
               </label>
@@ -154,7 +160,8 @@
           <fieldset class="form__comment">
             <legend class="form__comment-title">ДОП</legend>
               <p class="form__comment-option">
-                <textarea class="form__textarea" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <label class="visually-hidden" for="comment"></label>
+                <textarea class="form__textarea" id="comment" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </p>
           </fieldset>
           <div class="form__button-wrapper">
@@ -167,7 +174,7 @@
     <footer class="footer">
       <div class="footer__wrapper">
         <a class="footer__logo" href="index.html">
-          <svg class="footer__logo-image" width="101.615px" height="34.056px">
+          <svg class="footer__logo-image" width="101.615" height="34.056">
             <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
           </svg>
           <span class="visually-hidden">Интернет-магазинMishka</span>
@@ -175,7 +182,7 @@
           <ul class="social">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#">
-                <svg width="21.769px" height="21.334px">
+                <svg width="21.769" height="21.334">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
                 <span class="visually-hidden">Instagram</span>
@@ -183,7 +190,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <svg width="14.962px" height="27.718px">
+                <svg width="14.962" height="27.718">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
                 <span class="visually-hidden">Facebook</span>
@@ -191,7 +198,7 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#">
-                <svg width="23.494px" height="20.168px">
+                <svg width="23.494" height="20.168">
                   <use xlink:href="img/sprite.svg#icon-twitter"></use>
                 </svg>
                 <span class="visually-hidden">Twitter</span>
@@ -201,7 +208,7 @@
         <div class="copyright">
           <span class="copyright__text">Разработано</span>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="40">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40">
               <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
             </svg>
             <span class="visually-hidden">HTML Academy</span>
@@ -209,6 +216,8 @@
         </div>
       </div>
     </footer>
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/modal.js"></script>
   </body>
 </html>
