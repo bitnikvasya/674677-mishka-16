@@ -40,7 +40,7 @@
 }
 
 .form__color {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .form__type label,
@@ -182,7 +182,7 @@
 .form__fio-option {
   display: flex;
   flex-direction: column;
-  padding-bottom: 8px;
+  padding-bottom: 7px;
 }
 
 .form__telephone-option,
@@ -212,7 +212,7 @@
 }
 
 .form__textarea {
-  height: 140px;
+  height: 142px;
   padding: 15px;
   border: 2px solid #000000;
   resize: none;
@@ -227,7 +227,7 @@
 
 .form__button {
   background: none;
-  margin: 13px 0 53px;
+  margin: 13px 0 55px;
 }
 
 @media (min-width: @tablet-width) {
@@ -310,7 +310,7 @@
   }
 
   .form__color {
-    padding: 41px 50px 37px;
+    padding: 41px 50px 35px;
   }
 
   .form__color-list {
@@ -352,7 +352,7 @@
 
   .form__fio-option {
     flex-direction: row;
-    padding-bottom: 18px;
+    padding-bottom: 20px;
   }
 
   .form__fio-option label {
@@ -362,7 +362,7 @@
 
   .form__fio-option input {
     flex-grow: 1;
-    padding: 0 17px 15px;
+    padding: 0 17px 20px;
   }
 
   .form__fio-title {
@@ -379,7 +379,7 @@
 
   .form__telephone-option {
     margin-bottom: 0;
-    padding-bottom: 16px;
+    padding-bottom: 20px;
   }
 
   .form__label-telephone,
@@ -391,6 +391,7 @@
   .form__input-telephone,
   .form__input-email {
     background: #f1f1f1;
+    padding-bottom: 20px;
   }
 
   .form__email {
@@ -422,7 +423,7 @@
   .form__button {
     order: -1;
     width: 230px;
-    margin: 52px auto 50px 0;
+    margin: 55px auto 50px 0;
   }
 }
 
@@ -458,15 +459,15 @@
   }
 
   .form__color-wrapper {
-    padding: 40px 0;
+    padding: 40px 0 35px;
   }
 
   .form__telephone-wrapper {
-    padding: 40px 0 0 0;
+    padding: 45px 0 0 0;
   }
 
   .form__email-wrapper {
-    padding: 0 0 30px 0;
+    padding: 0 0 28px 0;
   }
 
   .form__color,
@@ -478,10 +479,14 @@
     padding: 0;
   }
 
-  .form__color-title,
+  .form__color-title {
+    top: 20px;
+    left: 60px;
+  }
+
   .form__telephone-title,
   .form__email-title {
-    top: 20px;
+    top: 15px;
     left: 60px;
   }
 
@@ -490,16 +495,20 @@
   }
 
   .form__color-option:nth-child(2n-1) {
-    width: 180px;
+    width: 183px;
   }
 
   .form__color-option {
-    width: 180px;
+    width: 183px;
   }
 
   .form__fio,
   .form__comment {
     padding: 45px 0 16px;
+  }
+
+  .form__fio-option input {
+    padding: 5px 17px 15px;
   }
 
   .form__fio-title {
@@ -516,6 +525,12 @@
   .form__label-telephone,
   .form__label-email {
     right: 10px;
+  }
+
+  .form__input-telephone,
+  .form__input-email {
+    padding-top: 20px;
+    padding-bottom: 16px;
   }
 
   .form__comment {
